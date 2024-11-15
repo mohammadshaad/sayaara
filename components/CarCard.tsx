@@ -7,7 +7,7 @@ type CarCardProps = {
 };
 
 const CarCard: React.FC<CarCardProps> = ({ car }) => {
-    const imageUrl = car.images && car.images[0] ? car.images[0].url : '/cars-default.png';
+    const imageUrl = car.images && car.images[0] ? car.images[0].url : '/car.webp';
 
     return (
         <div className="border rounded-2xl overflow-hidden shadow-lg p-6 m-4">
@@ -16,6 +16,7 @@ const CarCard: React.FC<CarCardProps> = ({ car }) => {
                     src={imageUrl}
                     alt={car.make}
                     layout="fill"
+                    className='rounded-xl'
                     objectFit="cover"
                 />
             </div>
